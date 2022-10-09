@@ -1,0 +1,281 @@
+/*  Fonts
+-----
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+*{
+    margin: 0;
+}
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+/* =================
+Typography
+================= */
+
+h1 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    font-size: 2rem;
+    margin: 0;
+}
+
+.subtitle {
+    font-weight: 700;
+    color: #1792d2;
+    font-size: .75rem;
+    margin: 0;
+}
+p{
+    line-height: 1.7;
+}
+a{
+    text-decoration: none;
+    color: #1792d2;
+}
+
+h2, p{
+    margin: .5em 0px;
+}
+h2, aside, h3{
+    color: #143774;
+}
+aside h2,
+.read-more{
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+.read-more{
+    color: #1792D2;
+    margin-bottom: 2em;
+}
+.read-more:hover,
+.read-more:hover{
+    text-decoration: underline;
+}
+.image-date{
+    font-size: .75rem;
+}
+footer p{
+    margin: 0;
+}
+footer .copyright{
+    font-size: .75rem;
+    color: #EBEBEB;
+}
+.about-box,
+.recent-box{
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #EBEBEB;
+}
+
+.about-box div,
+.recent-box div{
+    background-color: white;
+    padding: 1em;
+}
+.recent-box p{
+    padding-bottom: .5em;
+    border-bottom: 2px solid #EBEBEB;
+    margin-bottom: 1em;
+}
+.recent-box p:last-child{
+    padding-bottom: 0;
+    margin-bottom: 0em;
+    border-bottom: 0px solid transparent;
+}
+aside img{
+    height: 200px;
+    object-fit: cover;
+}
+
+/* =================
+Layout
+================= */
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    /* border: 2px solid blue; */
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background: #f8f8f8;
+    padding: 2em 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    padding: 2em 0px;
+}
+footer{
+    padding: 2em;
+    /* margin-top: .75em; */
+    background-color: #143774;
+    color: white;
+    text-align: center;
+}
+.order{
+    display: flex;
+    flex-direction: column;
+}
+.one{
+    order: 0;
+}
+.two{
+    order: 1;
+}
+
+
+.col{
+    width: 100%;
+}
+
+.col2{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+.article-featured{
+    border-bottom: 2px solid #707070;
+    margin-bottom: 2em;
+}
+.about-me{
+    border-bottom: 0px solid transparent;
+}
+
+
+
+/* navigation */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #707070;
+    font-weight: 700;
+    padding: .25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #1792d2;
+}
+
+.current-page {
+    border-bottom: 1px solid #707070;
+}
+
+.current-page:hover {
+    color: #707070;
+}
+
+/* Media Queries */
+
+@media (min-width: 0px) and (max-width: 560px) {
+    .container-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    nav li{
+        margin-left: 0px;
+        margin-top: 1.5em;
+        text-transform: uppercase;
+        font-size: .75rem;
+    }
+
+    header {
+        text-align: center;
+    }
+}
+
+@media (min-width: 561px) and (max-width: 992px) {
+    .container-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+    nav li {
+        margin: 1em 1em 0px 1em;
+    }
+    .post-info-container h2{
+        margin-top: -1em;
+    }
+    .post-image-container .image-date{
+        text-align: right;
+    }
+}
+
+   
+@media (min-width: 993px) {
+    main{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .col{
+        width: 75%;
+    }
+    .col2{
+        width: 200px;
+    }
+    .posts{
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2em;
+    }
+    .posts h2{
+        margin: 0;
+    }
+    .post-image-container{
+        width: 25%
+    }
+    .post-info-container{
+        width: 73%;
+    }
+    .post-image-container img{
+        height: 210px;
+        object-fit: cover;
+    }
+    aside img{
+        height: 100px;
+        object-fit: cover;
+    }
+    .post-last-img{
+        object-fit: cover;
+        object-position: left;
+    }
+    .article-featured img{
+        height: 308px;
+        object-fit: cover;
+        object-position: bottom;
+    }
+}
